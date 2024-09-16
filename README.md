@@ -1,2 +1,6 @@
 # pizzapp
-app de pizzeria online
+
+App de pizzeria donde el usuario puede comprar pizza online
+
+## Diagrama de la Base de Datos
+
