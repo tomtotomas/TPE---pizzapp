@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-09-2024 a las 00:37:46
+-- Tiempo de generación: 17-10-2024 a las 20:57:55
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -37,8 +37,8 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`category_id`, `category_name`) VALUES
-(1, 'Clasica'),
-(2, 'Especial');
+(1, 'Clasicas'),
+(2, 'Especiales');
 
 -- --------------------------------------------------------
 
@@ -49,20 +49,21 @@ INSERT INTO `category` (`category_id`, `category_name`) VALUES
 CREATE TABLE `pizza` (
   `pizza_id` int(11) NOT NULL,
   `pizza_name` text NOT NULL,
-  `category_id` int(11) NOT NULL
+  `category_id` int(11) NOT NULL,
+  `price` float NOT NULL,
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `pizza`
 --
 
-INSERT INTO `pizza` (`pizza_id`, `pizza_name`, `category_id`) VALUES
-(1, 'Mozzarella', 1),
-(2, 'Fugazzeta', 1),
-(3, 'Jamon y queso', 2),
-(4, 'Napolitana', 2),
-(5, 'Capresse', 2),
-(6, 'Hawaiana', 2);
+INSERT INTO `pizza` (`pizza_id`, `pizza_name`, `category_id`, `price`, `image`) VALUES
+(1, 'Mozzarella', 1, 7000, 'pizza_1.png'),
+(2, 'Fugazzeta', 1, 8000, 'pizza_2.png'),
+(3, 'Jamon y queso', 2, 10000, 'pizza_3.png'),
+(4, 'Napolitana', 2, 9000, 'pizza_4.png'),
+(5, 'Hawaiana', 2, 11000, 'pizza_5.png');
 
 -- --------------------------------------------------------
 
@@ -87,7 +88,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`user_id`, `username`, `name`, `email`, `password`, `birthday`, `adress`) VALUES
 (1, 'ellokodlaspizzas125', 'martin gimenez', 'el_lokotincho_goku@hotmail.com', '123456', '1998-02-24', 'Necochea 1254'),
 (2, 'sofi_piolaa', 'sofia valdez', 'sofi_casiangeles@hotmail.com.ar', 'localinda1245', '1993-05-14', 'Independencia 1798'),
-(3, 'pelukita', 'elias nuñez', 'elias_nuñez_s@hotmail.com', 'yugioh123', '1999-10-28', 'Dorrego 2350');
+(3, 'pelukita', 'elias nuñez', 'elias_nuñez_s@hotmail.com', 'yugioh123', '1999-10-28', 'Dorrego 2350'),
+(4, 'webadmin', 'admin', 'admin@admin.com', 'admin', '2000-03-26', 'Av siempre viva 123');
 
 --
 -- Índices para tablas volcadas
@@ -121,13 +123,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `pizza`
 --
 ALTER TABLE `pizza`
-  MODIFY `pizza_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `pizza_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

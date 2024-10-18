@@ -1,0 +1,28 @@
+<h1><?php echo htmlspecialchars($categoryTitle); ?></h1>
+<section class="pizzas-category">
+    <?php if ($result->num_rows > 0): ?>
+        <?php while ($row = $result->fetch_assoc()): ?>
+            <div class="card">
+                <img src="images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['pizza_name']); ?>">
+                <div class="card-content">
+                    <div class="pizza-info">
+                        <h3><?php echo htmlspecialchars($row['pizza_name']); ?></h3>
+                        <p class="price">$<?php echo htmlspecialchars($row['price']); ?></p>
+                    </div>
+                    <button class="add-cart" data-id="<?php echo $row['pizza_id']; ?>" data-price="<?php echo $row['price']; ?>">
+                        <svg width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" stroke-width="0.00024000000000000003">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M12.5 2.2a10.3 10.3 0 1 0 10.3 10.3A10.299 10.299 0 0 0 12.5 2.2zm0 19.6a9.3 9.3 0 1 1 9.3-9.3 9.31 9.31 0 0 1-9.3 9.3zM13 12h5v1h-5v5h-1v-5H7v-1h5V7h1z"></path>
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </div> 
+            </div> 
+        <?php endwhile; ?>
+    <?php else: ?>
+        <p>No hay pizzas clásicas disponibles.</p>
+    <?php endif; ?>
+</section>

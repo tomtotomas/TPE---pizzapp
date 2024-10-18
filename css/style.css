@@ -1,0 +1,321 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #b42323;
+    font-family: Arial, sans-serif;
+}
+
+.home-b{
+    background-color: #f1d0a2;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p, h1, h2, h3 {
+    color: #1c0808;
+    text-align: center;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin: 0;
+}
+
+/* Logo */
+.logo-red {
+    max-width: 80%;
+    animation: slideDownFadeIn 1s ease-out forwards;
+}
+
+.logo-white {
+    max-width: 60px;
+}
+
+.logo-container {
+    background-color: #f1d0a2;
+    border-radius: 0px 0px 200px 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+.nav-container-container {
+    background-color: #840f0f;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 200;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+
+ul.navigation {
+    padding: 20px 0 100%;
+    color: white;
+    display: none;
+}
+
+ul.navigation.show {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200%;
+}
+
+ul.navigation li {
+    padding: 20px;
+    font-size: 25px;
+}
+
+#logout {
+    cursor: pointer;
+    color: white;
+}
+
+/* Products */
+.product {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+/* Shopping Cart */
+.shop {
+    display: none;
+}
+
+.shop.show {
+    display: block;
+}
+
+/* Forms */
+section {
+    padding: 25px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="file"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"] {
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"],
+input[type="button"],
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f1d0a2;
+    border: none;
+    border-radius: 4px;
+    color: #840f0f;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.submit-btn:hover {
+    background-color: #dcb885;
+}
+
+/* Promo Images */
+.promo-container {
+    margin-top: 15%;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.promo-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+.welcome {
+    margin: 10px;
+    text-align: left;
+}
+
+.name-color {
+    color: #840f0f;
+}
+
+/* Categories */
+.category {
+    padding-bottom: 10%;
+}
+
+.category h2 {
+    font-size: 2em;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.category-title {
+    padding-top: 30%;
+    margin: 0px;
+}
+
+/* Pizza Cards */
+.pizzas-scroll {
+    display: flex;
+    overflow-x: auto;
+}
+
+.pizzas-category {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    background-color: #b42323;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 220px;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+}
+
+.pizza-info {
+    text-align: left;
+}
+
+.price {
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+.add-cart {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Form Containers */
+.add-pizza-form-container,
+.delete-pizza-form-container,
+.modify-price-form-container,
+.add-category-form-container {
+    padding: 25px;
+    margin: 25% auto 10px;
+    width: 90%;
+    max-width: 400px;
+    background-color: #b42323;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.delete-pizza-form-container,
+.modify-price-form-container,
+.add-category-form-container {
+    margin: 10px auto;
+}
+
+/* Footer */
+footer {
+    background-color: #840f0f;
+    padding: 2px 0 50px;
+    position: sticky;
+    z-index: 100;
+}
+
+footer p, .shop p, section h2 {
+    color: white;
+}
+
+/* Animations */
+@keyframes slideDownFadeIn {
+    0% {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    section {
+        width: 70%;
+    }
+}
+
+@media (min-width: 900px) {
+    section {
+        width: 50%;
+    }
+}

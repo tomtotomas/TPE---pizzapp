@@ -1,0 +1,32 @@
+<section class="add-pizza-form-container">
+    <h2>Agregar una nueva pizza</h2>
+    <form action="add_process.php" method="post" enctype="multipart/form-data" class="add-pizza-form">
+        <label for="pizza_name">Nombre de la pizza:</label>
+        <input type="text" id="pizza_name" name="pizza_name" required>
+
+        <label for="category_id">Categoría:</label>
+        <select id="category_id" name="category_id" required>
+            <option value="">Seleccionar una categoría</option>
+            <?php
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<option value="' . $row['category_id'] . '">' . $row['category_name'] . '</option>';
+                }
+            } else {
+                echo '<option value="">No hay categorías disponibles</option>';
+            }
+            ?>
+            
+        </select>
+
+        <label for="price">Precio:</label>
+        <input type="number" id="price" name="price" step="0.01" required>
+
+        <label for="image">Imagen:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+
+        <button type="submit" class="submit-btn">Agregar pizza</button>
+    </form>
+</section>
+

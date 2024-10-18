@@ -1,0 +1,27 @@
+<section>
+    <form id="registerForm" method="POST" action="register_process.php">
+
+        <label for="name">Nombre completo:</label>
+        <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+
+        <label for="birthday">Fecha de nacimiento:</label>
+        <input type="date" id="birthday" name="birthday" required>
+
+        <label for="adress">Dirección:</label>
+        <input type="text" id="adress" name="adress" placeholder="Dirección" required>
+
+        <p id="errorMessage"><?php echo $error; ?></p>
+
+        <input type="submit" value="Registrarse">
+    </form>
+</section>
+

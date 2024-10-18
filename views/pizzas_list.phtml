@@ -1,0 +1,28 @@
+<div class="pizzas-container">
+    <?php
+    foreach ($groupedPizzas as $categoryId => $category) {
+        echo '<div class="category">';
+        echo '<h2>' . htmlspecialchars($categories[$categoryId]) . '</h2>';
+        echo '<div class="pizzas-scroll">';
+
+        foreach ($category['pizzas'] as $pizza) {
+            echo '<div class="card">';
+            echo '<img src="images/' . htmlspecialchars($pizza['image']) . '" alt="' . htmlspecialchars($pizza['pizza_name']) . '">';
+            echo '<div class="card-content">';
+            echo '<div class="pizza-info">';
+            echo '<h3>' . htmlspecialchars($pizza['pizza_name']) . '</h3>';
+            echo '<p class="price">$' . htmlspecialchars($pizza['price']) . '</p>';
+            echo '</div>';
+            echo '<button class="add-cart" data-id="' . $pizza['pizza_id'] . '" data-price="' . $pizza['price'] . '">
+                    <svg width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" stroke-width="0.00024000000000000003">
+                        <g><path d="M12.5 2.2a10.3 10.3 0 1 0 10.3 10.3A10.299 10.299 0 0 0 12.5 2.2zm0 19.6a9.3 9.3 0 1 1 9.3-9.3 9.31 9.31 0 0 1-9.3 9.3zM13 12h5v1h-5v5h-1v-5H7v-1h5V7h1z"></path></g>
+                    </svg>
+                  </button>';
+            echo '</div>';
+            echo '</div>'; 
+        }
+        echo '</div>'; 
+        echo '</div>'; 
+    }
+    ?>
+</div>
