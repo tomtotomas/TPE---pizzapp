@@ -4,4 +4,6 @@
 
 ## Descripción
 
-Una app de celular de una pizzeria llamada Balboa, permite a los usuarios registrarse, logearse y comprar pizzas, mientras que webadmin tiene la posibilidad de agregar categorias, pizzas, y eliminar a las susodichas.
+Una app para celular de una pizzeria llamada Balboa, permite a los usuarios registrarse, loguearse y comprar pizzas, mientras que webadmin tiene la posibilidad de agregar categorias, pizzas, y eliminar a las susodichas.
+user-webadmin
+pass-admin
