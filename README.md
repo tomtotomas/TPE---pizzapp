@@ -1,6 +1,6 @@
 # Proyecto TPE - Pizzas BALBOA
 
-## GRUPO 102 - Aaron Monteagudo, Tomas Gomez
+## GRUPO 112 - Aaron Monteagudo, Tomas Gomez
 
 ## Descripción
 
